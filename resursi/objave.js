@@ -1,4 +1,4 @@
-data = `{
+objave = {
     "objava1" : {
         "img" : "fet.webp",
         "naslov" : "FET OSCILOSKOPSKA SONDA ZA VIŠE FREKVENCIJE",
@@ -49,4 +49,4 @@ data = `{
         "naslov" : "DIŠITE LAKŠE UZ OVU OGRLICU SA LED SENZOROM",
         "tekst" : "Kada pravite nosive i svjetleće uređaje, ponekad je blistava duginska animacija sve što vam treba. Međutim, ponekad je dobro otići malo dalje i napraviti ovu impresivnu ogrlicu koja služi za informiranje o kvaliteti lokalnog zraka.<br> Ogrlica se sastoji od serije Neopixel LED traka, smještenih u urednom 3D štampanom kućištu napravljenom od fleksibilnog filamenta.<br> Spoj u obliku lastinog repa čini stavljanje i skidanje ogrlice lakim. TinyPico V2, baziran na ESP32, vodi emisiju, jer je vrlo mali i stoga savršen za nosivu aplikaciju. USB power bank obezbjeđuje napajanje mikrokontroleru i LED diodama. TinyPico koristi svoju WiFi vezu za upite serveru koji ima podatke o kvaliteti zraka iz zasebne senzorske jedinice.<br><br> Ogrlica standardno prikazuje animaciju mirnog disanja u hladnim tonovima. Međutim, kada se kvalitet zraka pogorša, on pokazuje toplije i toplije boje na oštriji i življi način. Nije uvijek lako napraviti projekte koji su i funkcionalni i udobni za nošenje, ali ovaj funkcionira na oba aspekta. I 3D fajlovi za ogrlicu i kod firmvera mikrokontrolera uključeni su u GitHub repo za one koji žele da zarone u sitnice."
     }
-}`;
+};

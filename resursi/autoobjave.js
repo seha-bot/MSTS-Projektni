@@ -5,7 +5,6 @@ function openpage(page)
 }
 
 window.onload = () => {
-    const objave = JSON.parse(data);
     const keys = Object.keys(objave);
 
     let autopage = document.getElementsByClassName("load");
