@@ -45,7 +45,7 @@ body
 
 .navbar
 {
-    width: min-content;
+    width: 100%;
     /* background-color: #0c0c0c; */
     display: flex;
     margin-left: auto;
@@ -86,37 +86,67 @@ hr
 }
 .blog
 {
-    margin: 0;
-    background-color: blue;
-    display: block;
+    /* margin: 0; */
+    /* background-color: blue; */
+    /* display: block; */
     width: 80%;
     font-family: 'proxima-nova';
 }
+.blog > h2
+{
+    font-size: 50px;
+    margin: 0;
+    padding-left: 10px;
+}
 .objava
 {
-    padding: 20px;
+    border-radius: 5px;
+    /* margin: 0;
+    padding: 0; */
     margin-bottom: 10px;
-    /* margin: 0;
-    padding: 0; */
-    background-color: black;
-    display: flex;
+    background-color: #111111;
 }
-.objava > h2
+.objava > div
 {
-    margin: auto;
-    font-size: xx-large;
-    /* margin: 0;
-    padding: 0; */
+    /* background-color: #F3BF10; */
+    margin-left: 10px;
+    margin-right: 10px;
+    width: calc(100% - 240px);
+    float: right;
 }
-.objava > p
+.objava > div > a
 {
+    /* background-color: bisque; */
+    font-size: 40px;
     margin: auto;
-    padding: 0;
+    transition: 0.3s;
+}
+.objava > div > a:hover
+{
+    color: #F3BF10;
+}
+.objava > div > p
+{
+    /* background-color: aqua; */
+    margin: auto;
+    margin-top: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #dcdcdc;
+
+    height: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    /* word-wrap: break-word; */
 }
 .objava > img
 {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    object-fit: cover;
+    /* background-color: aliceblue; */
 }
 .more
 {
