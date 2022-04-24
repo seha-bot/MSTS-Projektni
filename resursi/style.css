@@ -1,0 +1,163 @@
+@font-face {
+    font-family: "proxima-nova";
+    font-style: normal;
+    font-weight: 800;
+    font-stretch: normal;
+    src: url("https://use.typekit.net/af/a3eee8/00000000000000003b9b093c/27/l?subset_id=2&fvd=n8&v=3") format("woff2"), url("https://use.typekit.net/af/a3eee8/00000000000000003b9b093c/27/d?subset_id=2&fvd=n8&v=3") format("woff"), url("https://use.typekit.net/af/a3eee8/00000000000000003b9b093c/27/a?subset_id=2&fvd=n8&v=3") format("opentype");
+}
+
+body
+{
+    background-color: #1A1A1A;
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+.main
+{
+    padding: 25px 15% 0 15%;
+    min-height: 100vh;
+}
+.head
+{
+    width: 100%;
+}
+.logo
+{
+    display: flex;
+    padding-bottom: 20px;
+}
+.logo > img
+{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 20px;
+    width: 100px;
+    height: 100px;
+}
+.logo > h1
+{
+    text-align: center;
+    margin: auto;
+    font-family: 'proxima-nova';
+    font-size: 100px;
+}
+
+.navbar
+{
+    width: min-content;
+    /* background-color: #0c0c0c; */
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+.navbar > a
+{
+    font-family: 'proxima-nova';
+    font-size: 25px;
+    /* background-color: aquamarine; */
+    padding: 8px;
+    transition: 0.3s;
+}
+.navbar > a:hover{
+    color: #F3BF10;
+}
+.navbar > span
+{
+    font-family: 'proxima-nova';
+    font-size: 18px;
+    float: right;
+    margin: auto 10px auto auto;
+}
+
+hr
+{
+    border: 3px solid white;
+    border-radius: 5px;
+}
+
+.body
+{
+    /* background-color: black; */
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 100%;
+    display: flex;
+}
+.blog
+{
+    margin: 0;
+    background-color: blue;
+    display: block;
+    width: 80%;
+    font-family: 'proxima-nova';
+}
+.objava
+{
+    padding: 20px;
+    margin-bottom: 10px;
+    /* margin: 0;
+    padding: 0; */
+    background-color: black;
+    display: flex;
+}
+.objava > h2
+{
+    margin: auto;
+    font-size: xx-large;
+    /* margin: 0;
+    padding: 0; */
+}
+.objava > p
+{
+    margin: auto;
+    padding: 0;
+}
+.objava > img
+{
+    width: 100px;
+    height: 100px;
+}
+.more
+{
+    /* background-color: #F3BF10; */
+    margin-left: 20px;
+    margin-top: 50px;
+    font-family: 'proxima-nova';
+    display: block;
+    width: 20%;
+}
+.more > h2
+{
+    margin-top: 25px;
+    margin-bottom: 0;
+    padding: 0;
+}
+select, input[type=text]
+{
+    width: 100%;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border: 1px solid #F3BF10;
+    color: #F3BF10;
+    border-radius: 4px;
+    background-color: #1A1A1A;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.footer
+{
+    width: auto;
+    padding: 10px;
+    background-color: black;
+    text-align: center;
+}
+.footer > p > b
+{
+    font-size: 20px;
+}
+.footer > img
+{
+    width: 100px;
+    height: 100px;
+}
