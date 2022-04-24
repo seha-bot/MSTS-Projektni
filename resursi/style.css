@@ -318,3 +318,26 @@ hr
     padding: 10px;
     object-fit: cover;
 }
+
+.komentari
+{
+    display: block;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+}
+.komentari > form > textarea, .komentari > form > input[type=submit]
+{
+    margin: auto;
+    margin-bottom: 20px;
+    width: 30%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border: 1px solid #F3BF10;
+    color: #F3BF10;
+    border-radius: 4px;
+    background-color: #1A1A1A;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 50%;
+}

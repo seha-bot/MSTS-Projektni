@@ -2,7 +2,6 @@ function openpage(page)
 {
     sessionStorage.setItem("page", page);
     location.href = "objava.html";
-    // window.location.replace("objava.html");
 }
 
 window.onload = () => {
