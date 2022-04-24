@@ -12,7 +12,7 @@ window.onload = () => {
     keys.forEach(key => { 
         let elementi = document.getElementsByClassName(key);
         for (let i = 0; i < elementi.length; i++) {
-            elementi[i].innerHTML = "<img src=\"resursi/img/" + objave[key]['img'] + "\"><div><a>" + objave[key]['naslov'] + "</a><p>" + objave[key]['tekst'] + "</p><a style=\"font-size:15px\">Read More</a></div>";
+            elementi[i].innerHTML = "<img src=\"resursi/img/" + objave[key]['img'] + "\"><div><a>" + objave[key]['naslov'] + "</a><p>" + objave[key]['tekst'] + "</p><a style=\"font-size:15px;\">Read More</a></div>";
         }
     });
 }
