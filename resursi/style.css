@@ -35,8 +35,10 @@ body
     width: 100px;
     height: 100px;
 }
-.logo > h1
+.logo > a
 {
+    color: white;
+    text-decoration: none;
     text-align: center;
     margin: auto;
     font-family: 'proxima-nova';
@@ -53,6 +55,8 @@ body
 }
 .navbar > a
 {
+    color: white;
+    text-decoration: none;
     font-family: 'proxima-nova';
     font-size: 25px;
     /* background-color: aquamarine; */
@@ -190,4 +194,34 @@ select, input[type=text]
 {
     width: 100px;
     height: 100px;
+}
+
+
+.blog > p
+{
+    font-size: 15px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.urednik
+{
+    display: flex;
+    margin-top: 30px;
+}
+.urednik > img
+{
+    width: 120px;
+    object-fit: cover;
+}
+.ured-naslov, .urednik > div > p
+{
+    font-size: 12px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    color: #dcdcdc;
+    padding: 0;
+    margin: 5px 0 10px 10px;
+}
+.ured-naslov
+{
+    font-weight: bold;
 }
