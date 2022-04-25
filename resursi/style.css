@@ -6,12 +6,12 @@
     src: url("https://use.typekit.net/af/a3eee8/00000000000000003b9b093c/27/l?subset_id=2&fvd=n8&v=3") format("woff2"), url("https://use.typekit.net/af/a3eee8/00000000000000003b9b093c/27/d?subset_id=2&fvd=n8&v=3") format("woff"), url("https://use.typekit.net/af/a3eee8/00000000000000003b9b093c/27/a?subset_id=2&fvd=n8&v=3") format("opentype");
 }
 
-/* @media screen and (max-width: 1000px) {
+@media screen and (max-width: 950px) {
     .main
     {
         background-color: white;
     }
-} */
+}
 
 body
 {
@@ -106,8 +106,6 @@ hr
 {
     padding: 5px;
     border-radius: 10px;
-    /* margin: 0;
-    padding: 0; */
     margin-bottom: 10px;
     background-color: #111111;
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
@@ -128,6 +126,15 @@ hr
     font-size: 40px;
     margin: auto;
     transition: 0.3s;
+
+    /* white-space: nowrap; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* number of lines to show */
+            line-clamp: 3;
+    -webkit-box-orient: vertical;
 }
 .objava > div > a:hover
 {
