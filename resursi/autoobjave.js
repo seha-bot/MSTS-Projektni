@@ -11,6 +11,40 @@ function komentarisi()
     sessionStorage.setItem("comment_ID", (comment_ID + 1).toString());
 }
 
+function contains(s1, s2, c1 = 0, c2 = 0)
+{
+    if(c2 == s2.length) return true;
+    if(c1 == s1.length || s2.length > s1.length) return false;
+  
+    if(s1[c1].toString().toLowerCase() == s2[c2].toString().toLowerCase()) return contains(s1, s2, c1 + 1, c2 + 1);
+    else if(s1[c1] == s2[0]) return contains(s1, s2, c1, 0);
+    else return contains(s1, s2, c1 + 1, 0);
+}
+
+function search()
+{
+    if(!contains(location.href, "index.html")) location.href = "index.html";
+    let value = document.getElementById("search").value;
+
+    let keys = Object.keys(objave);
+    let elementi = document.getElementsByClassName("list");
+    for (let i = 0; i < elementi.length; i++) elementi[i].innerHTML = "";
+
+    for (let i = 0; i < elementi.length; i++) {
+        keys.forEach(key => {
+            if(contains(objave[key]['naslov'], value))
+                elementi[i].innerHTML += "<div class=\"objava " + key + "\">";
+        });
+    }
+    
+    keys.forEach(key => {
+        let elementi = document.getElementsByClassName(key);
+        for (let i = 0; i < elementi.length; i++) {
+            elementi[i].innerHTML = "<img src=\"resursi/img/" + objave[key]['img'] + "\"><div><a href=\"#\" onclick=\"openpage('" + key + "');\">" + objave[key]['naslov'] + "</a><p>" + objave[key]['tekst'] + "</p><a href=\"#\" onclick=\"openpage('" + key + "');\" style=\"font-size:15px;\">Pročitaj Više</a></div>";
+        }
+    });
+}
+
 window.onload = () => {
     //Sat
     let danas = new Date();
@@ -30,14 +64,14 @@ window.onload = () => {
     let sidekomentari = "";
     for(let i = 0; i < comment_ID; i++)
     {
-        komentari += "<p>" + sessionStorage.getItem(i.toString()) + "</p>";
+        komentari += "<p><span style=\"color: #F3BF10;\">Anonimni korisnik:</span><br>" + sessionStorage.getItem(i.toString()) + "</p>";
         sidekomentari += "<p>Anonimni korisnik: \"<span style=\"color: #F3BF10;\"> " + sessionStorage.getItem(i.toString()) + " </span>\"</p>";
     }
     if(sekcija.length != 0) sekcija[0].innerHTML = komentari + sekcija[0].innerHTML;
     if(sidesekcija.length != 0) sidesekcija[0].innerHTML += sidekomentari;
 
     //Objave
-    const keys = Object.keys(objave);
+    let keys = Object.keys(objave);
 
     let autopage = document.getElementsByClassName("load");
     if(autopage.length > 0)
@@ -57,14 +91,14 @@ window.onload = () => {
     let elementi = document.getElementsByClassName("list");
     for (let i = 0; i < elementi.length; i++) {
         keys.forEach(key => {
-            elementi[i].innerHTML += "<div class=\"objava " + key + " \">";
+            elementi[i].innerHTML += "<div class=\"objava " + key + "\">";
         });
     }
     
     keys.forEach(key => {
         let elementi = document.getElementsByClassName(key);
         for (let i = 0; i < elementi.length; i++) {
-            elementi[i].innerHTML = "<img src=\"resursi/img/" + objave[key]['img'] + "\"><div><a href=\"#\" onclick=\"openpage('" + key + "');\">" + objave[key]['naslov'] + "</a><p>" + objave[key]['tekst'] + "</p><a href=\"#\" onclick=\"openpage('" + key + "');\" style=\"font-size:15px;\">Read More</a></div>";
+            elementi[i].innerHTML = "<img src=\"resursi/img/" + objave[key]['img'] + "\"><div><a href=\"#\" onclick=\"openpage('" + key + "');\">" + objave[key]['naslov'] + "</a><p>" + objave[key]['tekst'] + "</p><a href=\"#\" onclick=\"openpage('" + key + "');\" style=\"font-size:15px;\">Pročitaj Više</a></div>";
         }
     });
 }

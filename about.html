@@ -86,7 +86,7 @@
             <div class="more">
                 <h2>SEARCH</h2>
                 <hr>
-                <input type="text" placeholder="Search...">
+                <input id="search" type="text" placeholder="Search..." onkeydown="if(event.key === 'Enter') {event.preventDefault();search();}">
                 <h2>KATEGORIJE</h2>
                 <hr>
                 <select name="kategorije">
