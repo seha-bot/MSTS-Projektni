@@ -7,15 +7,18 @@
     <title>MUKI</title>
 </head>
 <body>
+    <button onclick="next();">Next</button>
     <div class="scrollbox">
-        <div class="box">
-            <p>1</p>
+        <div class="box" style="background-color: red;">
+            <p style="display: block; height: 30px;">JEDAN</p>
         </div>
         <div class="box">
-            <p>2</p>
+            <p style="display: block; height: 30px;">DVA</p>
         </div>
-        <div class="box">
-            <p>3</p>
+        <div class="box" style="background-color: orange;">
+            <p style="display: block; height: 30px;">TRI
+                <img src="resursi/img/adin.jpg" height="30px">
+            </p>
         </div>
     </div>
 </body>
@@ -29,11 +32,52 @@
     }
     .box
     {
+        position: fixed;
+        border: 2px solid black;
         background-color: aqua;
-        margin: auto;
+        transition: 0.5s ease-in-out;
     }
 </style>
 
 <script>
-    
+
+    let boxes = document.getElementsByClassName("box");
+    var parent = boxes[0].parentElement;
+    boxes[0].classList.add("selected");
+    for(let i = 0; i < boxes.length; i++)
+    {
+        boxes[i].style.width = parent.clientWidth + "px";
+        boxes[i].style.transform = "translateX(" + parent.clientWidth + "px" + ")";
+    }
+    boxes[0].style.transform = "translateX(0px)";
+
+    function delay(time) {
+        return new Promise(resolve => setTimeout(resolve, time));
+    }
+
+    async function next()
+    {
+        let scroll = document.getElementsByClassName("box");
+        for(let i = 0; i < scroll.length; i++)
+        {
+            if(scroll[i].classList.contains("selected"))
+            {
+                let next_id = i == scroll.length - 1 ? 0 : i + 1;
+                scroll[i].classList.remove("selected");
+                scroll[next_id].classList.add("selected");
+
+                scroll[next_id].style.display = "block";
+                await delay(100);
+                scroll[next_id].style.zIndex = "100";
+                scroll[next_id].style.transform = "translateX(0%)";
+                await delay(500);
+                scroll[i].style.display = "none";
+                scroll[i].style.transform = "translateX(" + parent.clientWidth + "px" + ")";
+                scroll[next_id].style.zIndex = "0";
+                // scroll[i].style.display = "block";
+                break;
+            }
+        }
+    }
+
 </script>
