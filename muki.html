@@ -4,61 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MUKI</title>
+    <title>Muki</title>
 </head>
 <body>
-                <section class="slider" id="pocetna">
-                    <div class="slideovi">
-
-                        <input type="radio" name="radio-btn" id="radio1">
-                        <input type="radio" name="radio-btn" id="radio2">
-                        <input type="radio" name="radio-btn" id="radio3">
-                        <input type="radio" name="radio-btn" id="radio4">
-
-                    <div class="slide prvi">
-                        <p>NESTO</p>
-                        <img src="resursi/img/adin.jpg" alt="">
-                    </div>
-                    <div class="slide">
-                        <img src="resursi/img/biciklo.webp" alt="">
-                    </div>
-                    <div class="slide">
-                        <img src="resursi/img/fare.jpg" alt="">
-                    </div>
-                    <div class="slide">
-                        <img src="resursi/img/muki.jpeg" alt="">
-                    </div>
-
-                    <div class="automatska-navigacija">
-                        <div class="auto-btn1"></div>
-                        <div class="auto-btn2"></div>
-                        <div class="auto-btn3"></div>
-                        <div class="auto-btn4"></div>
-                    </div>
-
-                    </div>
-
-                    <div class="manuelna-navigacija">
-                        <label for="radio1" class="manual-btn"></label>
-                        <label for="radio2" class="manual-btn"></label>
-                        <label for="radio3" class="manual-btn"></label>
-                        <label for="radio4" class="manual-btn"></label>
-                    </div>
-
-                </section>
+    <div id="glava">
+        <img style="width: 100px; height: 100px;" src="resursi/img/logo.png">
+        <h1 style="color: white; margin: auto;">MUKIJEVE KOMPONENTE</h1>
+    </div>
+    <div id="stranica">
+        <img src="resursi/img/komponente.jpg">
+    </div>
+    <div id="futer">
+        <p style="margin: 0; padding: 40px; text-align: center;">Prati me na Instagramu: @grabus_m_04</p>
+    </div>
 </body>
 </html>
 
-<script type="text/javascript">
-    var brojac = 1;
-    setInterval(function(){
-        document.getElementById('radio' + brojac).checked = true;
-        brojac++;
-        if(brojac > 4){
-            brojac = 1;
-        }
-    }, 5000);
-</script>
-
 <style>
+    body {
+        padding: 0;
+        margin: 0;
+        color: white;
+    }
+    #glava {
+        background-color: black;
+        display: flex;
+        padding: 0;
+        margin: 0;
+    }
+    #stranica {
+        background-color: aquamarine;
+        display: block;
+        width: 100%;
+        height: 1000px;
+        padding: 0;
+        margin: 0;
+    }
+    #futer {
+        background-color: black;
+        display: block;
+        width: 100%;
+        height: 150px;
+        padding: 0;
+        margin: 0;
+    }
 </style>
