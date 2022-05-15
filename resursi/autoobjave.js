@@ -102,3 +102,12 @@ window.onload = () => {
         }
     });
 }
+
+var brojac = 1;
+setInterval(function(){
+    document.getElementById('radio' + brojac).checked = true;
+    brojac++;
+    if(brojac > 4){
+        brojac = 1;
+    }
+}, 5000);

@@ -7,77 +7,58 @@
     <title>MUKI</title>
 </head>
 <body>
-    <button onclick="next();">Next</button>
-    <div class="scrollbox">
-        <div class="box" style="background-color: red;">
-            <p style="display: block; height: 30px;">JEDAN</p>
-        </div>
-        <div class="box">
-            <p style="display: block; height: 30px;">DVA</p>
-        </div>
-        <div class="box" style="background-color: orange;">
-            <p style="display: block; height: 30px;">TRI
-                <img src="resursi/img/adin.jpg" height="30px">
-            </p>
-        </div>
-    </div>
+                <section class="slider" id="pocetna">
+                    <div class="slideovi">
+
+                        <input type="radio" name="radio-btn" id="radio1">
+                        <input type="radio" name="radio-btn" id="radio2">
+                        <input type="radio" name="radio-btn" id="radio3">
+                        <input type="radio" name="radio-btn" id="radio4">
+
+                    <div class="slide prvi">
+                        <p>NESTO</p>
+                        <img src="resursi/img/adin.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="resursi/img/biciklo.webp" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="resursi/img/fare.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="resursi/img/muki.jpeg" alt="">
+                    </div>
+
+                    <div class="automatska-navigacija">
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                        <div class="auto-btn4"></div>
+                    </div>
+
+                    </div>
+
+                    <div class="manuelna-navigacija">
+                        <label for="radio1" class="manual-btn"></label>
+                        <label for="radio2" class="manual-btn"></label>
+                        <label for="radio3" class="manual-btn"></label>
+                        <label for="radio4" class="manual-btn"></label>
+                    </div>
+
+                </section>
 </body>
 </html>
 
-<style>
-    .scrollbox
-    {
-        background-color: aquamarine;
-        display: flex;
-    }
-    .box
-    {
-        position: fixed;
-        border: 2px solid black;
-        background-color: aqua;
-        transition: 0.5s ease-in-out;
-    }
-</style>
-
-<script>
-
-    let boxes = document.getElementsByClassName("box");
-    var parent = boxes[0].parentElement;
-    boxes[0].classList.add("selected");
-    for(let i = 0; i < boxes.length; i++)
-    {
-        boxes[i].style.width = parent.clientWidth + "px";
-        boxes[i].style.transform = "translateX(" + parent.clientWidth + "px" + ")";
-    }
-    boxes[0].style.transform = "translateX(0px)";
-
-    function delay(time) {
-        return new Promise(resolve => setTimeout(resolve, time));
-    }
-
-    async function next()
-    {
-        let scroll = document.getElementsByClassName("box");
-        for(let i = 0; i < scroll.length; i++)
-        {
-            if(scroll[i].classList.contains("selected"))
-            {
-                let next_id = i == scroll.length - 1 ? 0 : i + 1;
-                scroll[i].classList.remove("selected");
-                scroll[next_id].classList.add("selected");
-
-                scroll[next_id].style.display = "block";
-                await delay(100);
-                scroll[next_id].style.zIndex = "100";
-                scroll[next_id].style.transform = "translateX(0%)";
-                await delay(500);
-                scroll[i].style.display = "none";
-                scroll[i].style.transform = "translateX(" + parent.clientWidth + "px" + ")";
-                scroll[next_id].style.zIndex = "0";
-                // scroll[i].style.display = "block";
-                break;
-            }
+<script type="text/javascript">
+    var brojac = 1;
+    setInterval(function(){
+        document.getElementById('radio' + brojac).checked = true;
+        brojac++;
+        if(brojac > 4){
+            brojac = 1;
         }
-    }
-
+    }, 5000);
 </script>
+
+<style>
+</style>

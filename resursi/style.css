@@ -6,12 +6,12 @@
     src: url("https://use.typekit.net/af/a3eee8/00000000000000003b9b093c/27/l?subset_id=2&fvd=n8&v=3") format("woff2"), url("https://use.typekit.net/af/a3eee8/00000000000000003b9b093c/27/d?subset_id=2&fvd=n8&v=3") format("woff"), url("https://use.typekit.net/af/a3eee8/00000000000000003b9b093c/27/a?subset_id=2&fvd=n8&v=3") format("opentype");
 }
 
-@media screen and (max-width: 950px) {
+/* @media screen and (max-width: 950px) {
     .main
     {
         background-color: white;
     }
-}
+} */
 
 body
 {
@@ -284,13 +284,11 @@ hr
 
 .nesto
 {
+    border: 3px solid #F3BF10;
+    margin: 0 auto;
     height: 230px;
-}
-.nesto > img
-{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 80%;
+    margin-bottom: 30px;
 }
 
 .load
@@ -353,4 +351,67 @@ hr
     text-align: left;
     padding: 20px;
     text-overflow: ellipsis;
+}
+
+
+.slider {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin-bottom: 5rem;
+}
+.slideovi {
+    width: 500%;
+    height: 100%;
+    display: flex;
+}
+.slideovi input {
+    display: none;
+}
+.slide {
+    width: 20%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    transition: 2s;
+}
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+.slide > div > a {
+    text-decoration: none;
+    color: #F3BF10;
+}
+
+.manuelna-navigacija {
+    width: 100%;
+    margin-top: -2rem;
+    display: flex;
+    justify-content: center;
+}
+.manual-btn {
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 1s;
+}
+.manual-btn:not(:last-child) {
+    margin-right: 20px;
+}
+.manual-btn:hover {
+    background-color: #F3BF10;
+}
+
+#radio1:checked ~ .prvi {
+margin-left: 0;
+}
+#radio2:checked ~ .prvi {
+margin-left: -20%;
+}
+#radio3:checked ~ .prvi {
+margin-left: -40%;
+}
+#radio4:checked ~ .prvi {
+margin-left: -60%;
 }
